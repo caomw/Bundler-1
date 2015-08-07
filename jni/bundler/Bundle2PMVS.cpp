@@ -253,7 +253,8 @@ void WritePMVS(const char *output_path, char *list_file, char *bundle_file,
     fclose(f_scr);
 }
 
-int main(int argc, char **argv) 
+//int main(int argc, char **argv) 
+int bundle2pmvs(int argc, char **argv)
 {
     if (argc != 3 && argc != 4) {
         printf("Usage: %s <list.txt> <bundle.out> [pmvs_output_path (default: pmvs)]\n", 

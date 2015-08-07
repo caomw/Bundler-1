@@ -189,7 +189,7 @@ void ReadBundleFile(char *bundle_file,
     fclose(f);
 }
 
-void ReadListFile(char *list_file, std::vector<std::string> &files)
+void ReadListFile2(char *list_file, std::vector<std::string> &files)
 {
     FILE *f = fopen(list_file, "r");
     
@@ -392,7 +392,8 @@ void WriteNewFiles(const char *output_path,
     WriteBundleFile(buf, cameras, points);
 }
 
-int main(int argc, char **argv) 
+//int main(int argc, char **argv) 
+int radiaundistort(int argc, char **argv)
 {
     if (argc != 4) {
         printf("Usage: %s <list.txt> <bundle.out> <output_path>\n", argv[0]);
@@ -410,7 +411,7 @@ int main(int argc, char **argv)
     std::vector<std::string> files2;
 
     if (strcmp(list_file, "none") != 0)
-        ReadListFile(list_file, files);
+        ReadListFile2(list_file, files);
 
     ReadBundleFile(bundle_file, files2, cameras, points);
 

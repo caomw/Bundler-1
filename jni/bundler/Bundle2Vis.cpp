@@ -196,7 +196,8 @@ void WriteVisFile(const char *vis_file,
     fclose(f);
 }
 
-int main(int argc, char **argv) 
+//int main(int argc, char **argv) 
+int bundle2vis(int argc, char **argv)
 {
     if (argc != 3) {
         printf("Usage: %s <bundle.out> <vis.dat>\n", argv[0]);
